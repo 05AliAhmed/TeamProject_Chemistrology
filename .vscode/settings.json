@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Team Project_Chemistrology.sln"
+    "dotnet.defaultSolution": "Chemistrology_repos.sln"
 }
