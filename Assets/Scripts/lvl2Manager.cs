@@ -2,17 +2,17 @@
 // using UnityEngine.SceneManagement;
 // using UnityEngine.UI;
 // using TMPro;
-// using UnityEngine.SocialPlatforms.Impl;
-// using UnityEditor.Build.Player;
+// using Unity.PlasticSCM.Editor.WebApi;
+// using JetBrains.Annotations;
 
-
-// public class Lvl1_Buttons : MonoBehaviour
+// public class lvl2Manager : MonoBehaviour
 // {
 //     [SerializeField] int amendScore = 10;
 //     int score;
-//     // Score score;
-//     public health scores; 
+//     public health scores2;
 //     int presscount;
+//     Scene currentScn;
+//     public string scnname;
 //     [SerializeField]int loseScore;
 //     [SerializeField] int combopoints;
 //     [SerializeField] TMP_Text scoreTxt;
@@ -20,7 +20,7 @@
 //     [SerializeField] float scoreNeedToPass;
 //     // [SerializeField] HSManager highScore;
 //     [SerializeField] Image progressbar;
-//     public string scnname;
+
 //     // [SerializeField] GameObject HSManager;
 //     // public void BackOption()
 //     // {
@@ -32,23 +32,23 @@
 //         score += amendScore;
 //         presscount++;
 //         // Debug.Log(presscount);
+//         // highScore.HighScore2();
 //         if(presscount > 2)
 //         {
 //             score += combopoints;
-//             // Debug.Log("Combo");
+//             Debug.Log("Combo");
 //         }
-//         // highScore.HighScore1();
-//         if(score > PlayerPrefs.GetInt("Highscore1",0))
+//         if(score > PlayerPrefs.GetInt("Highscore2",0))
 //         {
-//             PlayerPrefs.SetInt("Highscore1", score);
+//             PlayerPrefs.SetInt("Highscore2", score);
 //             highScoreTxt.text = score.ToString(); 
-//             // highScore.HighScore1()   
+//         //     highScore.HighScore2();
 //         }
 //         scoreTxt.text = score.ToString();
 //         // Debug.Log(score);
 //     }
 
-//         public void LoseScore()
+//     public void LoseScore()
 //     {
 //         score -= loseScore;
 //         presscount = 0;
@@ -58,9 +58,10 @@
 //         }
 //         scoreTxt.text = score.ToString();
 //     }
+
 //     public void ChangeScr()
 //     {
-//         SceneManager.LoadScene(2);   
+//         SceneManager.LoadScene(3);   
 //     }
 //     // void Awake()
 //     // {
@@ -68,14 +69,17 @@
 //     // }
 //     void Start()
 //     {
-//         // score = scores.score;
-//         score = 0;
-//         highScoreTxt.text = PlayerPrefs.GetInt("Highscore1", 0).ToString();
+//         currentScn  = SceneManager.GetActiveScene();
+//         // Debug.Log(currentScn);
+//         highScoreTxt.text = PlayerPrefs.GetInt("Highscore2", 0).ToString();
+//         // highscoremanager.lvl2highscore()
+        
 //     }
 
+//     // Update is called once per frame
 //     void Update()
 //     {
-//         // scores.score = score;
+//         // scores2.score = score;
 //         progressbar.fillAmount = (scoreNeedToPass - score)/ scoreNeedToPass;
 //     }
 // }
